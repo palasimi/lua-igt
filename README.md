@@ -24,6 +24,21 @@ print(html)
 
 See [examples](./examples).
 
+## Styling
+
+Add this to your CSS stylesheet:
+
+```css
+.igt {
+  margin: 1em 2em;
+}
+.igt-label {
+  font-variant: small-caps;
+  text-decoration: underline dashed;
+  text-transform: lowercase;
+}
+```
+
 ## License
 
 [MIT](./LICENSE)
