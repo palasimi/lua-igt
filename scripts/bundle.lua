@@ -8,6 +8,7 @@ end
 
 exec "mkdir -p build"
 
-local args = "-o build/filter.lua -s src/filter.lua igt igt.html igt.parser"
-local command = "lua_modules/bin/amalg.lua %s"
-exec(command:format(args))
+local args = "igt igt.html igt.parser"
+local opts = "-s src/filter.lua -o build/filter.lua -p scripts/license.lua"
+local command = "lua_modules/bin/amalg.lua %s %s"
+exec(command:format(args, opts))

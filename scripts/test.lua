@@ -7,4 +7,4 @@ local function exec(command)
 end
 
 exec "lua_modules/bin/busted"
-exec "lua_modules/bin/luacheck src spec scripts"
+exec "lua_modules/bin/luacheck src spec scripts --exclude-files scripts/license.lua"
