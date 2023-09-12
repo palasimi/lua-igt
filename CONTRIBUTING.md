@@ -5,13 +5,14 @@ This guide assumes that you have a working installation of [lua](https://www.lua
 To get started, run the following command in the root directory of the project.
 
 ```bash
+luarocks init
 luarocks make
 ```
 
 ## Running tests
 
 ```bash
-luarocks tests 
+luarocks test
 ```
 
 This will automatically install testing dependencies and run all tests and linters.
