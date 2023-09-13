@@ -39,7 +39,7 @@ lua -l before example.lua
 
 ## Pandoc filter usage
 
-See [examples](./examples).
+See [examples](https://github.com/palasimi/lua-igt/tree/main/examples).
 
 ## Styling
 

@@ -29,4 +29,4 @@ lua scripts/bundle.lua
 ```
 
 This will build the filter in the `build` directory.
-See the `examples` for usage instructions.
+See the [examples](https://github.com/palasimi/lua-igt/tree/main/examples) for usage instructions.
