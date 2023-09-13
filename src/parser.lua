@@ -60,14 +60,6 @@ local function is_aligned(s, t)
 	return true
 end
 
--- Checks if string is single- or double-quoted.
-local function is_quoted(s)
-	if string.match(s, "^'") and string.match(s, "'$") then
-		return true
-	end
-	return string.match(s, '^"') and string.match(s, '"$')
-end
-
 -- Parses interlinear gloss.
 -- Raises an error if there's something wrong with the input.
 local function parse(interlinear)
@@ -93,11 +85,6 @@ local function parse(interlinear)
 	-- Check number of lines.
 	if #lines > 3 then
 		error "too many lines"
-	end
-
-	-- Check translation.
-	if not is_quoted(lines[3]) then
-		error "unquoted translation"
 	end
 
 	-- Align segmented text and gloss.

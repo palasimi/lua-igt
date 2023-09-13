@@ -41,37 +41,6 @@ describe("parse", function()
     end)
   end)
 
-  describe("with unquoted translation", function()
-    it("should raise an error", function()
-      local example = [[
-        Hola.
-        hello
-        Hello.
-      ]]
-
-      local ok, message = pcall(parser.parse, example)
-      assert.is_false(ok)
-      assert.is_true(contains(message, "unquoted translation"))
-    end)
-  end)
-
-  it("should not complain about single-quoted translations", function()
-    parser.parse [[
-      Hola.
-      hello
-      'Hello.'
-    ]]
-  end)
-
-  it("should not complain about double-quoted translation", function()
-    parser.parse [[
-      Hola.
-      hola
-      hello
-      "Hello."
-    ]]
-  end)
-
   describe("gloss alignment", function()
     describe("if glosses have an unequal number of morphemes", function()
       it("should raise an error", function()
