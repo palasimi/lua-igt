@@ -1,3 +1,8 @@
+-- Check if string s contains t as a substring.
+local function contains(s, t)
+	return string.find(s, t, 1, true) ~= nil
+end
+
 -- Joins strings in table together; sep is inserted between each element.
 -- If sep is nil, it's taken to be the empty string.
 local function join(t, sep)
@@ -36,6 +41,7 @@ local function indent(s, prefix)
 end
 
 return {
+	contains = contains,
 	join = join,
 	indent = indent,
 	iter_lines = iter_lines,

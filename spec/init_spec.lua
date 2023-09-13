@@ -1,9 +1,6 @@
 local igt = require "igt"
 
--- Checks if string s contains t as a substring.
-local function contains(s, t)
-  return string.find(s, t, 1, true) ~= nil
-end
+local contains = require("igt.strings").contains
 
 describe("compile", function()
   it("should have pre-defined glossing abbreviations", function()

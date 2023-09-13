@@ -1,10 +1,7 @@
 local html = require "igt.html"
 local parser = require "igt.parser"
 
--- Checks if string s contains t as a substring.
-local function contains(s, t)
-  return string.find(s, t, 1, true) ~= nil
-end
+local contains = require("igt.strings").contains
 
 describe("create_igt", function()
   local example = parser.parse [[

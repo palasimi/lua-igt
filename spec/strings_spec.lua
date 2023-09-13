@@ -1,5 +1,22 @@
 local strings = require "igt.strings"
 
+describe("contains", function()
+  describe("if first arg contains second arg", function()
+    it("should return true", function()
+      assert.is_true(strings.contains("ab", "a"))
+      assert.is_true(strings.contains("ab", "b"))
+      assert.is_true(strings.contains("ab", "ab"))
+    end)
+  end)
+
+  describe("if first arg does not contain second arg", function()
+    it("should return false,", function()
+      assert.is_false(strings.contains("a", "b"))
+      assert.is_false(strings.contains("", "b"))
+    end)
+  end)
+end)
+
 describe("join", function()
   describe("with sep argument", function()
     it("should insert sep between each string", function()
