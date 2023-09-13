@@ -26,7 +26,7 @@ Save it as `build/filter.lua` (from the project's root directory).
 Then run the following command in the same directory as this file you're reading:
 
 ```bash
-pandoc README.md -s -L ../../build/filter.lua
+pandoc README.md -s --lua-filter ../../build/filter.lua
 ```
 
 ## Source
