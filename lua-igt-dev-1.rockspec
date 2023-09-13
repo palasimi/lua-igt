@@ -16,12 +16,12 @@ description = {
 dependencies = {
    "lua >= 5.1, < 5.5"
 }
-build_dependencies = {
-   "amalg"
-}
 test_dependencies = {
    "busted",
-   "luacheck"
+   "luacheck",
+
+   -- Not needed by tests but by filter bundler
+   "amalg"
 }
 build = {
    type = "builtin",

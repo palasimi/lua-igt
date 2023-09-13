@@ -7,6 +7,7 @@ To get started, run the following command in the root directory of the project.
 ```bash
 luarocks init
 luarocks make
+luarocks test --prepare
 ```
 
 ## Running tests
@@ -15,7 +16,7 @@ luarocks make
 luarocks test
 ```
 
-This will automatically install testing dependencies and run all tests and linters.
+This will run all tests and linters.
 
 ## Pandoc filter
 
