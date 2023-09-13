@@ -39,6 +39,10 @@ lua -l before example.lua
 
 ## Pandoc filter usage
 
+The pandoc filter converts every code block containing the `gloss` class into a nicely formatted gloss.
+It tries to follow the conventions described by the [Leipzig Glossing Rules](https://www.eva.mpg.de/lingua/resources/glossing-rules.php).
+There's a pre-defined list of glossing abbreviations, but you can define your own abbreviations using a YAML file.
+
 See [examples](https://github.com/palasimi/lua-igt/tree/main/examples).
 
 ## Styling
