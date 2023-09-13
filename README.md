@@ -7,6 +7,7 @@ Available as a library and as a [pandoc filter](https://github.com/palasimi/lua-
 ## Library usage
 
 ```lua
+-- example.lua
 local igt = require "igt"
 
 local html = igt.compile [[
@@ -19,6 +20,22 @@ print(html)
 ```
 
 (Example taken from the [Leipzig Glossing Rules](https://www.eva.mpg.de/lingua/resources/glossing-rules.php))
+
+**Note**: If you installed `lua-igt` in a custom directory (e.g. `lua_modules`),
+you may have to [update `package.path`](https://leafo.net/guides/customizing-the-luarocks-tree.html#the-install-locations/using-a-custom-directory/quick-guide/running-scripts-with-packages)
+before loading `igt`, like so:
+
+```lua
+-- before.lua
+local version = _VERSION:match "%d+%.%d+"
+package.path = "lua_modules/share/lua/" .. version .. "/?.lua;lua_modules/share/lua/" .. version .. "/?/init.lua;" .. package.path
+```
+
+Then load `before.lua` before running the script:
+
+```bash
+lua -l before example.lua
+```
 
 ## Pandoc filter usage
 
