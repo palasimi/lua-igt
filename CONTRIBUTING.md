@@ -13,6 +13,7 @@ luarocks test --prepare
 ## Running tests
 
 ```bash
+luarocks make
 luarocks test
 ```
 
