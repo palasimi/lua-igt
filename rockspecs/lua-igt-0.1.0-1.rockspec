@@ -1,8 +1,9 @@
 rockspec_format = "3.0"
 package = "lua-igt"
-version = "dev-1"
+version = "0.1.0-1"
 source = {
-   url = "git://github.com/palasimi/lua-igt"
+   url = "git://github.com/palasimi/lua-igt",
+   tag = "v0.1.0"
 }
 description = {
    summary = "Pure lua module for converting interlinear glosses to HTML",
@@ -16,21 +17,19 @@ description = {
 dependencies = {
    "lua >= 5.1, < 5.5"
 }
-test_dependencies = {
-   "busted",
-   "luacheck",
-
-   -- Not needed by tests but by filter bundler
-   "amalg",
-}
 build = {
    type = "builtin",
    modules = {
       igt = "src/init.lua",
       ["igt.html"] = "src/html.lua",
       ["igt.parser"] = "src/parser.lua",
-      ["igt.strings"] = "src/strings.lua",
+      ["igt.strings"] = "src/strings.lua"
    }
+}
+test_dependencies = {
+   "busted",
+   "luacheck",
+   "amalg"
 }
 test = {
    type = "command",

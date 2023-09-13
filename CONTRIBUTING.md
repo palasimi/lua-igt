@@ -30,3 +30,9 @@ lua scripts/bundle.lua
 
 This will build the filter in the `build` directory.
 See the [examples](https://github.com/palasimi/lua-igt/tree/main/examples) for usage instructions.
+
+## Creating a new rockspec
+
+```bash
+luarocks new_version lua-igt-dev-1.rockspec "$VERSION" --tag "v$VERSION" --dir rockspecs
+```
