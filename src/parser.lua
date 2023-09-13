@@ -1,18 +1,8 @@
--- Trims leading and trailing whitespace from string.
-local function trim(s)
-	local t, _ = string.gsub(s, "^%s*(.*)%s*$", "%1")
-	return t
-end
+local strings = require "igt.strings"
 
--- Iterates over lines in string.
-local function iter_lines(s)
-	return string.gmatch(trim(s), "[^\n]+")
-end
-
--- Iterates over words in string.
-local function iter_words(s)
-	return string.gmatch(trim(s), "%S+")
-end
+local iter_lines = strings.iter_lines
+local iter_words = strings.iter_words
+local trim = strings.trim
 
 -- Iterates over morphemes of word.
 local function iter_morphemes(w)

@@ -21,14 +21,15 @@ test_dependencies = {
    "luacheck",
 
    -- Not needed by tests but by filter bundler
-   "amalg"
+   "amalg",
 }
 build = {
    type = "builtin",
    modules = {
       igt = "src/init.lua",
       ["igt.html"] = "src/html.lua",
-      ["igt.parser"] = "src/parser.lua"
+      ["igt.parser"] = "src/parser.lua",
+      ["igt.strings"] = "src/strings.lua",
    }
 }
 test = {

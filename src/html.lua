@@ -1,3 +1,7 @@
+local strings = require "igt.strings"
+
+local join = strings.join
+
 -- Iterates over pairs of segments.
 local function iter_word_pairs(segments, gloss)
 	local start = 1
@@ -24,17 +28,6 @@ local function iter_word_pairs(segments, gloss)
 
 		return a, b
 	end
-end
-
--- Joins strings in table together; sep is inserted between each element.
--- If sep is nil, it's taken to be the empty string.
-local function join(t, sep)
-	sep = sep or ""
-	local s = t[1] or ""
-	for i = 2, #t do
-		s = s .. string.format("%s%s", sep, t[i])
-	end
-	return s
 end
 
 local sanitation_table = {
