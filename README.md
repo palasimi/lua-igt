@@ -2,7 +2,15 @@
 
 Pure lua module for converting interlinear glosses to HTML.
 
-Available as a library and as a [pandoc filter](https://github.com/palasimi/lua-igt/releases).
+Available as a library and as a pandoc filter.
+
+## Installation
+
+```bash
+luarocks install lua-igt
+```
+
+Or [download](https://github.com/palasimi/lua-igt/releases).
 
 ## Library usage
 
