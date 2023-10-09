@@ -157,7 +157,7 @@ local function create_alignment(segments, gloss, abbreviations)
 		local b_html = create_metaword(b, abbreviations)
 		html = html .. div{innerHTML = a_html .. b_html}
 	end
-	return div{innerHTML = html, style = "display: flex; gap: 1em"}
+	return div{innerHTML = html, style = "display: flex; column-gap: 1em; flex-wrap: wrap"}
 end
 
 -- Converts pre-parsed gloss to HTML.
